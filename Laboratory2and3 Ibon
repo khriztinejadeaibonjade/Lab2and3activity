@@ -1,0 +1,86 @@
+Laboratory 2:
+
+Part 1;
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+op = input("Enter operation (+, -, *, /): ")
+operations = {
+    "+": num1 + num2,
+    "-": num1 - num2,
+    "*": num1 * num2,
+    "/": num1 / num2 if num2 != 0 else "Error"
+}
+print("Result:", operations.get(op, "Invalid operation"))
+
+Part 2;
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+average = (num1 + num2) / 2
+print("Average:", average)
+
+Part 3;
+score = float(input("Enter score: "))
+if score >= 60:
+    print("Result: Pass")
+else:
+    print("Result: Fail")
+
+Reflection Questions
+1. Why is type conversion important?
+    -  Because the type conversion (like `int()` or `float()`) is crucial because inputs are usually strings. Converting ensures you work with the right data type (numbers, etc.).
+2. What happens if input is invalid?
+    - The invalid input (like text when expecting numbers) causes errors. Programs might crash or behave unexpectedly.
+3. How can errors be prevented?
+    -  we can try to use `try-except` blocks base on my research to catch errors, validate inputs, or provide clear input instructions.
+
+Laboratory 3:
+
+Part 1;
+def display_details():
+    print("Name: Khriztine Jade Ibon")
+    print("Course: BS Computer Science")
+    print("Year: 2nd Year")
+
+Part 2:
+def display_details(name, age, course, address, contact):
+    print(f"Name: {name}")
+    print(f"Age: {age}")
+    print(f"Course: {course}")
+    print(f"Address: {address}")
+    print(f"Contact: {contact}")
+display_details("KhriztineJade Ibon", 20, "BS Computer Science", "Laua an Antique",   "09636839479")
+
+Part 3;
+def add_numbers(a, b):
+    return a + b
+result = add_numbers(5, 3)
+print("Result:", result)
+
+Part 4:
+def compute_average():
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+    num3 = float(input("Enter third number: "))
+    average = (num1 + num2 + num3) / 3
+    return average
+
+print("Average:", compute_average())
+
+Part 5;
+def calculator():
+    print("1. Add\n2. Subtract\n3. Multiply\n4. Divide")
+    choice = int(input("Enter choice (1-4): "))
+    x, y = float(input("Enter first number: ")), float(input("Enter second number: "))
+    ops = {1: x+y, 2: x-y, 3: x*y, 4: x/y if y!=0 else "Error"}
+    print("Result:", ops.get(choice, "Invalid choice"))
+
+calculator()
+
+Reflection Questions:
+1. Why is type conversion important?
+2. What happens if input is invalid?
+3. How can errors be prevented?
+Answer;
+1. Functions help organize code, reduce repetition, and make it reusable.
+2.The `return` statement sends a value back to the caller, allowing the result to be used elsewhere.
+3. Functions break down complex code into manageable blocks, making it easier to understand and maintain.
